@@ -14,11 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+         \App\Models\User::factory(1)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+         \App\Models\User::factory()->create([
+             'first_name' => 'Mohammad',
+             'last_name' => 'Nazari',
+             'birth_date' => '1991-06-25',
+             'meli_code' => '0013499564',
+             'email' => 'admin@ipaco-group.com',
+             'password' => bcrypt('password')
+         ]);
     }
 }
